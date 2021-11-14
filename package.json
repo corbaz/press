@@ -1,0 +1,25 @@
+{
+  "name": "vitepress",
+  "version": "1.0.0",
+  "description": "VitePress Descripcion",
+  "main": "index.js",
+  "repository": "url deploy",
+  "author": "julio.corbazgmaill.com",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "vitepress": "^0.20.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs --host",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "github push": "git add . && git commit -m 'backup-rapido' && git push press",
+    "deploy-github-pages": "npx gh-pages -d dist",
+    "deploy-surge-sh": "vitepress build docs && cd docs && cd .vitepress && cd dist && surge --domain svelte-corbaz.surge.sh",
+    "serve": "vite preview",
+    "ncu": "ncu",
+    "ncu-u-install": "ncu -u && npm install",
+    "git-remote": "git remote add git@github.com:corbaz/press.git"
+  }
+}
